@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thymeleaf.org ">
+
+<head>
+    <meta charset=UTF-8>
+    <title>APP EVENTOS</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cadastro de eventos:</h1>
+    <h3><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Listade
+        Eventos</a></h3>
+
+</div>
+
+<div class="container">
+    <b>
+        <th:block th:include="mensagemValidacao"></th:block>
+    </b>
+</div>
+
+<form class="container" method="post">
+
+    Nome:<input type="text" value="" name="nome">
+
+    <div class="row">
+        <div class="input-field col s6">
+            Local:<input type="text" value="" name="local">
+        </div>
+        <div class="input-field col s3">
+            Data:<input type="date" value="" name="data">
+        </div>
+        <div class="input-field col s3">
+            Horario:<input type="text" value="" name="horario">
+        </div>
+    </div>
+
+    <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+
+</form>
+
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
